@@ -1,19 +1,36 @@
-# Zeen 投稿
+# Zenn Content
 
-Zennに関するチャット、記事アイデア、下書き、公開状況をこのプロジェクトで管理するための作業場所です。
+ZennとGitHubを連携して記事を管理するためのリポジトリです。
 
-## 管理するもの
+このプロジェクトでは、Zennに投稿する記事Markdownに加えて、記事化に使えるチャット、記事アイデア、公開状況も管理します。
 
+## 構成
+
+- `articles/`: Zennの記事Markdownを置く場所
+- `books/`: Zennの本を置く場所
 - `chats/`: CodexやChatGPTで話したZenn関連チャットの要約、参照元、次アクション
-- `articles/`: Zenn記事のアイデア、下書き、公開ステータス
 - `notes/`: 調査メモ、参考リンク、記事化前の断片メモ
 
-## 基本フロー
+## Zenn記事の使い方
+
+1. `articles/` に記事Markdownを追加します。
+2. `published: false` のままGitHubへpushすると下書きとして管理できます。
+3. 公開する準備ができたら、記事のFront Matterを `published: true` に変更します。
+
+## ローカルプレビュー
+
+Zenn CLIを使える環境では、次のコマンドでプレビューできます。
+
+```bash
+npx zenn preview
+```
+
+## 管理フロー
 
 1. Zennに関するチャットを見つけたら `chats/zenn-chat-index.md` に記録する
 2. 記事化できそうな内容は `articles/backlog.md` に追加する
-3. 下書きを作る場合は `articles/drafts/` に1記事1ファイルで保存する
-4. 公開済みになったら `articles/published.md` に移す
+3. Zenn記事として扱うものは `articles/<slug>.md` に保存する
+4. 公開済みになったら `articles/published.md` にも記録する
 
 ## 現在の確認状況
 
