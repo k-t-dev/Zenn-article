@@ -28,9 +28,9 @@ npx zenn preview
 ## 管理フロー
 
 1. Zennに関するチャットを見つけたら `chats/zenn-chat-index.md` に記録する
-2. 記事化できそうな内容は `articles/backlog.md` に追加する
+2. 記事化できそうな内容は `notes/article-backlog.md` に追加する
 3. Zenn記事として扱うものは `articles/<slug>.md` に保存する
-4. 公開済みになったら `articles/published.md` にも記録する
+4. 公開済みになったら `notes/published-articles.md` にも記録する
 
 ## 現在の確認状況
 
